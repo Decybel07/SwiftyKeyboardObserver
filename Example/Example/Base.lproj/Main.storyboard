@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,36 +27,43 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes" keyboardType="twitter" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uME-Mk-Kgw">
-                                <rect key="frame" x="0.0" y="647" width="375" height="20"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="fze-pp-ZGq"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4Z-Ka-zgX">
                                 <rect key="frame" x="0.0" y="204" width="375" height="443"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vu-i4-bSt">
+                                        <rect key="frame" x="0.0" y="343" width="375" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="lGh-s6-FlX"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="g5o-R9-l8d" kind="show" id="sHd-ZF-Mvv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.89740560209999998" blue="0.323519426" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0Vu-i4-bSt" secondAttribute="trailing" id="BtA-26-yrC"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Vu-i4-bSt" secondAttribute="bottom" id="Sqq-bc-KuK"/>
+                                    <constraint firstItem="0Vu-i4-bSt" firstAttribute="leading" secondItem="h4Z-Ka-zgX" secondAttribute="leading" id="fcb-sj-eKm"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h4Z-Ka-zgX" firstAttribute="top" secondItem="3RK-ZN-N7w" secondAttribute="bottom" constant="10" id="3F1-zj-IBm"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uME-Mk-Kgw" secondAttribute="bottom" id="53p-CW-sjv"/>
                             <constraint firstAttribute="trailing" secondItem="h4Z-Ka-zgX" secondAttribute="trailing" id="88T-M8-w8H"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3RK-ZN-N7w" secondAttribute="trailing" id="8ZR-kW-xIH"/>
-                            <constraint firstItem="uME-Mk-Kgw" firstAttribute="top" secondItem="h4Z-Ka-zgX" secondAttribute="bottom" id="P7F-50-7bQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h4Z-Ka-zgX" secondAttribute="bottom" constant="20" id="KDE-V2-qP2"/>
                             <constraint firstItem="h4Z-Ka-zgX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZSM-Mk-FZ8"/>
-                            <constraint firstItem="uME-Mk-Kgw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gT8-UR-0lz"/>
                             <constraint firstItem="3RK-ZN-N7w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="igc-PK-Gcj"/>
                             <constraint firstItem="3RK-ZN-N7w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="o76-Jx-4ZC"/>
-                            <constraint firstAttribute="trailing" secondItem="uME-Mk-Kgw" secondAttribute="trailing" id="zfn-bG-xoH"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="hideKeyboardOnTap" value="YES"/>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <outlet property="keyboardConstraint" destination="53p-CW-sjv" id="Rv5-8l-rfd"/>
+                            <outlet property="keyboardConstraint" destination="KDE-V2-qP2" id="X5M-4w-zgO"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="vLV-y6-sbB">
@@ -101,4 +107,7 @@
             <point key="canvasLocation" x="32.799999999999997" y="68.815592203898049"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="sHd-ZF-Mvv"/>
+    </inferredMetricsTieBreakers>
 </document>

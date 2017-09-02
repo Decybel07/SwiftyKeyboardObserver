@@ -42,13 +42,13 @@ pod try SwiftyKeyboardObserver
 ### [CocoaPods](http://cocoapods.org)
 
 ```ruby
-pod 'SwiftyKeyboardObserver', '~> 1.0'
+pod 'SwiftyKeyboardObserver', '~> 1.1'
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```ogdl
-github "Decybel07/SwiftyKeyboardObserver", ~> 1.0
+github "Decybel07/SwiftyKeyboardObserver", ~> 1.1
 ```
 
 ### [Swift Package Manager](https://swift.org/package-manager/)

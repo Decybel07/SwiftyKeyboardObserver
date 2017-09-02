@@ -11,6 +11,7 @@ import UIKit
 public protocol KeyboardObserver: class {
 
     var keyboardWillChangeFrameObserver: NSObjectProtocol? { get set }
+    var initialConstant: CGFloat { get }
 
     var constraint: NSLayoutConstraint! { get }
     var view: UIView! { get }
@@ -60,6 +61,6 @@ public extension KeyboardObserver {
     }
 
     private func constant(for keyboardFrame: CGRect) -> CGFloat {
-        return max(self.view.convert(self.view.frame, to: nil).maxY - keyboardFrame.minY, 0)
+        return max(self.view.convert(self.view.frame, to: nil).maxY - keyboardFrame.minY, 0) + self.initialConstant
     }
 }

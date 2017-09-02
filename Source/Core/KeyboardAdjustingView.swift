@@ -10,31 +10,19 @@ import UIKit
 
 open class KeyboardAdjustingView: UIView, KeyboardObserver {
 
+    @IBInspectable
+    public var hideKeyboardOnTap: Bool = false
+
     @IBOutlet
     public weak var keyboardConstraint: NSLayoutConstraint! {
         didSet {
+            self.initialConstant = self.keyboardConstraint.constant
             self.registerKeyboardNotification()
         }
     }
 
-    @IBInspectable
-    public var hideKeyboardOnTap: Bool = false {
-        didSet {
-            if self.hideKeyboardOnTap {
-                self.addGestureRecognizer(self.tapGestureRecognizer)
-            } else {
-                self.removeGestureRecognizer(self.tapGestureRecognizer)
-            }
-        }
-    }
-
-    private lazy var tapGestureRecognizer: UITapGestureRecognizer = {
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
-        gestureRecognizer.cancelsTouchesInView = false
-        return gestureRecognizer
-    }()
-
     public var keyboardWillChangeFrameObserver: NSObjectProtocol?
+    public var initialConstant: CGFloat = 0
 
     public var view: UIView! {
         return self
@@ -44,8 +32,12 @@ open class KeyboardAdjustingView: UIView, KeyboardObserver {
         return self.keyboardConstraint
     }
 
-    public func hideKeyboard() {
-        self.endEditing(true)
+    open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+
+        if self.hideKeyboardOnTap {
+            self.endEditing(true)
+        }
     }
 
     deinit {

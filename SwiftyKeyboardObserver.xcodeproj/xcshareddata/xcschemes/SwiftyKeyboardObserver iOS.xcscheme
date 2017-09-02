@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D51A5CA1F4E05E000EF2801"
-               BuildableName = "SwiftyKeyboardObserver iOS.framework"
+               BuildableName = "SwiftyKeyboardObserver.framework"
                BlueprintName = "SwiftyKeyboardObserver iOS"
                ReferencedContainer = "container:SwiftyKeyboardObserver.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D51A5CA1F4E05E000EF2801"
-            BuildableName = "SwiftyKeyboardObserver iOS.framework"
+            BuildableName = "SwiftyKeyboardObserver.framework"
             BlueprintName = "SwiftyKeyboardObserver iOS"
             ReferencedContainer = "container:SwiftyKeyboardObserver.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D51A5CA1F4E05E000EF2801"
-            BuildableName = "SwiftyKeyboardObserver iOS.framework"
+            BuildableName = "SwiftyKeyboardObserver.framework"
             BlueprintName = "SwiftyKeyboardObserver iOS"
             ReferencedContainer = "container:SwiftyKeyboardObserver.xcodeproj">
          </BuildableReference>

@@ -1,6 +1,10 @@
 
 # Change Log
 
+## [1.1.0](https://github.com/Decybel07/SwiftyKeyboardObserver/tree/1.1.0) (2017-09-02)
+* Remember the constant value of constraint
+* Bugfix - when you set `hideKeyboardOnTap` to true, and tap on the button then keyboard will hide but this button doesn't sent event
+
 ## [1.0.0](https://github.com/Decybel07/SwiftyKeyboardObserver/tree/1.0.0) (2017-08-27)
 * Zero lines of your code
 * Supporting Storyboard configuration

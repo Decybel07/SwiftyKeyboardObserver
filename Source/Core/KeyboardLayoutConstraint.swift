@@ -13,11 +13,13 @@ open class KeyboardLayoutConstraint: NSLayoutConstraint, KeyboardObserver {
     @IBOutlet
     public weak var containerView: UIView! {
         didSet {
+            self.initialConstant = self.constant
             self.registerKeyboardNotification()
         }
     }
 
     public var keyboardWillChangeFrameObserver: NSObjectProtocol?
+    public var initialConstant: CGFloat = 0
 
     public var view: UIView! {
         return self.containerView
