@@ -11,18 +11,18 @@ import UIKit
 open class KeyboardAdjustingView: UIView, KeyboardObserver {
 
     @IBInspectable
-    public var hideKeyboardOnTap: Bool = false
+    open var hideKeyboardOnTap: Bool = false
 
     @IBOutlet
-    public weak var keyboardConstraint: NSLayoutConstraint! {
+    open weak var keyboardConstraint: NSLayoutConstraint! {
         didSet {
             self.initialConstant = self.keyboardConstraint.constant
             self.registerKeyboardNotification()
         }
     }
 
-    public var keyboardWillChangeFrameObserver: NSObjectProtocol?
-    public var initialConstant: CGFloat = 0
+    open var keyboardWillChangeFrameObserver: NSObjectProtocol?
+    open var initialConstant: CGFloat = 0
 
     public var view: UIView! {
         return self

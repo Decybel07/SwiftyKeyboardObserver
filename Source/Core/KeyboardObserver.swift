@@ -61,6 +61,8 @@ public extension KeyboardObserver {
     }
 
     private func constant(for keyboardFrame: CGRect) -> CGFloat {
-        return max(self.view.convert(self.view.frame, to: nil).maxY - keyboardFrame.minY, 0) + self.initialConstant
+        return (keyboardFrame.maxY == UIScreen.main.bounds.maxY
+            ? max(self.view.convert(self.view.frame, to: nil).maxY - keyboardFrame.minY, 0) : 0
+        ) + self.initialConstant
     }
 }
