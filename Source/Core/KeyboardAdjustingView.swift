@@ -17,12 +17,11 @@ open class KeyboardAdjustingView: UIView, KeyboardObserver {
     open weak var keyboardConstraint: NSLayoutConstraint! {
         didSet {
             self.initialConstant = self.keyboardConstraint.constant
-            self.registerKeyboardNotification()
         }
     }
 
     open var keyboardWillChangeFrameObserver: NSObjectProtocol?
-    open var initialConstant: CGFloat = 0
+    private(set) public var initialConstant: CGFloat = 0
 
     public var view: UIView! {
         return self
@@ -30,6 +29,16 @@ open class KeyboardAdjustingView: UIView, KeyboardObserver {
 
     public var constraint: NSLayoutConstraint! {
         return self.keyboardConstraint
+    }
+
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.registerKeyboardNotification()
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.registerKeyboardNotification()
     }
 
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

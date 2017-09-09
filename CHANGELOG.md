@@ -1,6 +1,10 @@
 
 # Change Log
 
+## [1.1.1](https://github.com/Decybel07/SwiftyKeyboardObserver/tree/1.1.1) (2017-09-09)
+* Created example project
+* Bugfix - Strange behavior when undocking the keyboard
+
 ## [1.1.0](https://github.com/Decybel07/SwiftyKeyboardObserver/tree/1.1.0) (2017-09-02)
 * Remember the constant value of constraint
 * Bugfix - when you set `hideKeyboardOnTap` to true, and tap on the button then keyboard will hide but this button doesn't sent event
