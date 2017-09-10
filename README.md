@@ -5,6 +5,7 @@
 [![Language Swift3](https://img.shields.io/badge/languages-Swift%203.0+-FFAC45.svg?style=flat)](https://developer.apple.com/swift/) 
 [![CocoaPods Platform](https://img.shields.io/cocoapods/p/SwiftyKeyboardObserver.svg?style=flat&label=platform)](http://cocoapods.org/pods/SwiftyKeyboardObserver)
 [![CocoaPods License](https://img.shields.io/cocoapods/l/SwiftyKeyboardObserver.svg?style=flat&label=license)](https://github.com/Decybel07/SwiftyKeyboardObserver/blob/master/LICENSE)
+[![Docs percent](https://img.shields.io/badge/docs-100%25-brightgreen.svg)](http://cocoadocs.org/docsets/SwiftyKeyboardObserver/)
 [![Pod method Compatible](https://img.shields.io/badge/supports-CocoaPods%20%7C%20Carthage%20%7C%20Swift%20Package%20Manager-green.svg?style=flat)](#-installation)
 [![codebeat badge](https://codebeat.co/badges/57da10a2-ad83-458a-8ec1-4cd38f85e420)](https://codebeat.co/projects/github-com-decybel07-SwiftyKeyboardObserver-master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7010823ec49144058c809df382231a57)](https://www.codacy.com/app/Decybel07/SwiftyKeyboardObserver/dashboard)
@@ -19,6 +20,15 @@ A codeless library that helps adjusting your views when a keyboard appears, move
 - [x] Supporting orientation changes.
 - [x] Supporting modal and pop-over.
 - [x] Changing the length of a bottom Auto Layout constraint.
+
+##  Overview
+
+<p align="center">
+<table><tr>
+<td><img src="https://raw.githubusercontent.com/Decybel07/SwiftyKeyboardObserver/master/Images/UIScrollView720.gif" alt="UIScrollView"/></td>
+<td><img src="https://raw.githubusercontent.com/Decybel07/SwiftyKeyboardObserver/master/Images/HideKeyboardOnTap720.gif" alt="HideKeyboardOnTap"/></td>
+</tr></table>
+</p>
 
 ## 💻 Demo
 

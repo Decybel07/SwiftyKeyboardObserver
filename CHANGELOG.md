@@ -1,6 +1,10 @@
 
 # Change Log
 
+## [1.1.2](https://github.com/Decybel07/SwiftyKeyboardObserver/tree/1.1.2) (2017-09-10)
+* Documentation
+* Added gifs to README
+
 ## [1.1.1](https://github.com/Decybel07/SwiftyKeyboardObserver/tree/1.1.1) (2017-09-09)
 * Created example project
 * Bugfix - Strange behavior when undocking the keyboard

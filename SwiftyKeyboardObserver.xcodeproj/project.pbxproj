@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D51A5CB1F4E05E000EF2801 /* SwiftyKeyboardObserver iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "SwiftyKeyboardObserver iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D51A5CB1F4E05E000EF2801 /* SwiftyKeyboardObserver iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "SwiftyKeyboardObserver iOS.framework"; path = SwiftyKeyboardObserver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D51A5D71F4E061700EF2801 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D51A5D91F4E061700EF2801 /* SwiftyKeyboardObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyKeyboardObserver.h; sourceTree = "<group>"; };
 		2DDA64551F522981002F8DE1 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };

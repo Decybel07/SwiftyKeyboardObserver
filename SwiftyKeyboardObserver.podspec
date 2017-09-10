@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name             = 'SwiftyKeyboardObserver'
-  spec.version          = '1.1.1'
+  spec.version          = '1.1.2'
   spec.summary          = 'A codeless library that helps adjusting your views when a keyboard appears, moves and disappears'
 
   spec.description      = <<-DESC
