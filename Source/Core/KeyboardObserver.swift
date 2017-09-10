@@ -8,17 +8,32 @@
 
 import UIKit
 
+/// Protocol KeyboardObserver.
+///
+/// Adjusts the constant value of the constraint when the keyboard appears, moves and disappears.
+///
 public protocol KeyboardObserver: class {
 
+    /// Observer for required notification.
     var keyboardWillChangeFrameObserver: NSObjectProtocol? { get set }
+
+    /// Initial constant.
     var initialConstant: CGFloat { get }
 
+    /// The constraint to which the constant value will be changed.
     var constraint: NSLayoutConstraint! { get }
+
+    /// The view for which the constant value of the constraint will be calculated.
     var view: UIView! { get }
 }
 
 public extension KeyboardObserver {
 
+    /// Register required notification.
+    ///
+    /// - Important:
+    /// If you register notification then remember to call *unregisterKeyboardNotification*.
+    ///
     func registerKeyboardNotification() {
         guard self.keyboardWillChangeFrameObserver == nil else {
             return
@@ -31,6 +46,7 @@ public extension KeyboardObserver {
         }
     }
 
+    /// Unregister notification.
     func unregisterKeyboardNotification() {
         guard let observer = self.keyboardWillChangeFrameObserver else {
             return
@@ -54,15 +70,20 @@ public extension KeyboardObserver {
             delay: 0,
             options: UIViewAnimationOptions(rawValue: options.uintValue),
             animations: {
-                self.constraint.constant = self.constant(for: frame)
+                self.constraint?.constant = self.constant(for: frame)
                 self.view.layoutIfNeeded()
             }
         )
     }
 
     private func constant(for keyboardFrame: CGRect) -> CGFloat {
+        let length = (
+            (self.constraint.firstItem as? UILayoutSupport) ??
+                (self.constraint.secondItem as? UILayoutSupport)
+        )?.length ?? 0
+
         return (keyboardFrame.maxY == UIScreen.main.bounds.maxY
-            ? max(self.view.convert(self.view.frame, to: nil).maxY - keyboardFrame.minY, 0) : 0
+            ? max(self.view.convert(self.view.frame, to: nil).maxY - keyboardFrame.minY - length, 0) : 0
         ) + self.initialConstant
     }
 }

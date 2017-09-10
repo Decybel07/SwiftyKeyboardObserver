@@ -8,8 +8,10 @@
 
 import UIKit
 
+/// Class KeyboardLayoutConstraint.
 open class KeyboardLayoutConstraint: NSLayoutConstraint, KeyboardObserver {
 
+    /// The view for which the constant value of the constraint will be calculated.
     @IBOutlet
     open weak var containerView: UIView! {
         didSet {
