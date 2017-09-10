@@ -69,6 +69,14 @@ github "Decybel07/SwiftyKeyboardObserver", ~> 1.1
 
 ## 📘 [Usage](http://cocoadocs.org/docsets/SwiftyKeyboardObserver/)
 
+### Set custom class ###
+<img src="https://raw.githubusercontent.com/Decybel07/SwiftyKeyboardObserver/master/Images/SetCustomClass720.png" alt="Set custom class"/>
+
+### Connect keyboard constraint ###
+<img src="https://raw.githubusercontent.com/Decybel07/SwiftyKeyboardObserver/master/Images/ConnectKeyboardConstraint720.png" alt="Connect keyboard constraint"/>
+
+### Set hide keyboard on tap ###
+<img src="https://raw.githubusercontent.com/Decybel07/SwiftyKeyboardObserver/master/Images/SetHideKeyboardOnTap720.png" alt="Set hide keyboard on tap"/>
 
 ## 🤓 Author
 
