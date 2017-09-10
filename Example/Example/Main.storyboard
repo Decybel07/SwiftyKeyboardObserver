@@ -19,9 +19,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="YKz-Oo-VU5">
-                            <rect key="frame" x="0.0" y="132" width="375" height="0.0"/>
+                            <rect key="frame" x="0.0" y="88" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="And many others. Any ideas?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHv-gG-FNR">
+                                    <rect key="frame" x="20" y="10" width="335" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="FHv-gG-FNR" secondAttribute="trailing" constant="20" id="5Vk-K1-TW4"/>
+                                <constraint firstAttribute="bottom" secondItem="FHv-gG-FNR" secondAttribute="bottom" constant="10" id="d6a-rR-vFh"/>
+                                <constraint firstItem="FHv-gG-FNR" firstAttribute="top" secondItem="YKz-Oo-VU5" secondAttribute="top" constant="10" id="xsI-PK-xjJ"/>
+                                <constraint firstItem="FHv-gG-FNR" firstAttribute="leading" secondItem="YKz-Oo-VU5" secondAttribute="leading" constant="20" id="z6H-gu-K7P"/>
+                            </constraints>
                         </view>
                         <sections>
                             <tableViewSection id="VrZ-l2-bru">
@@ -66,23 +80,6 @@
                                             <segue destination="sCg-rD-8oi" kind="show" id="SUw-HA-sUb"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="Uzn-Y0-hQ6" style="IBUITableViewCellStyleDefault" id="fx6-1R-knh">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fx6-1R-knh" id="isp-bX-YKJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Comming soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uzn-Y0-hQ6">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -113,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3H-aX-p7m">
-                                <rect key="frame" x="0.0" y="64" width="375" height="226"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="182"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Pr-dx-2kJ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="722.5"/>
@@ -285,7 +282,7 @@
                             <constraint firstAttribute="trailing" secondItem="u3H-aX-p7m" secondAttribute="trailing" id="oP6-cn-D4w"/>
                         </constraints>
                         <connections>
-                            <outlet property="keyboardConstraint" destination="bwp-kh-q7e" id="hnd-dn-Tp3"/>
+                            <outlet property="keyboardConstraint" destination="bwp-kh-q7e" id="TUV-Fz-FBp"/>
                         </connections>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -293,7 +290,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87l-PI-3ER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="-143"/>
+            <point key="canvasLocation" x="1654" y="-96"/>
         </scene>
         <!--Hide keyboard on tap-->
         <scene sceneID="ngf-SH-IRd">
@@ -304,17 +301,11 @@
                         <viewControllerLayoutGuide type="bottom" id="xW7-hh-Zl8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="z70-R0-nbG" customClass="KeyboardAdjustingView" customModule="SwiftyKeyboardObserver">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JKK-Sa-eZJ">
-                                <rect key="frame" x="36" y="94" width="303" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USG-7B-ehw">
-                                <rect key="frame" x="0.0" y="190" width="375" height="50"/>
+                                <rect key="frame" x="36" y="196" width="303" height="50"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Hsc-20-83T"/>
@@ -325,49 +316,59 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap outside the text field to hide the keyboard" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVg-yV-qhz">
-                                <rect key="frame" x="36" y="132" width="303" height="38.5"/>
+                                <rect key="frame" x="36" y="89" width="303" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JKK-Sa-eZJ" customClass="NextResponderTextField" customModule="Example_iOS" customModuleProvider="target">
+                                <rect key="frame" x="36" y="156" width="303" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eVg-yV-qhz" firstAttribute="leading" secondItem="z70-R0-nbG" secondAttribute="leadingMargin" constant="20" id="2Ka-Vu-g8o"/>
-                            <constraint firstAttribute="trailing" secondItem="USG-7B-ehw" secondAttribute="trailing" id="9LS-C6-SlJ"/>
-                            <constraint firstItem="USG-7B-ehw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eVg-yV-qhz" secondAttribute="bottom" constant="10" id="A3e-5m-1s7"/>
-                            <constraint firstItem="JKK-Sa-eZJ" firstAttribute="top" secondItem="DTy-iT-NQs" secondAttribute="bottom" constant="30" id="CYj-qC-sGA"/>
-                            <constraint firstItem="xW7-hh-Zl8" firstAttribute="top" secondItem="USG-7B-ehw" secondAttribute="bottom" id="QsG-pA-Gh0"/>
-                            <constraint firstItem="USG-7B-ehw" firstAttribute="leading" secondItem="z70-R0-nbG" secondAttribute="leading" id="c6m-ZE-c9r"/>
-                            <constraint firstItem="eVg-yV-qhz" firstAttribute="top" secondItem="JKK-Sa-eZJ" secondAttribute="bottom" constant="8" id="cXI-ko-wqZ"/>
+                            <constraint firstItem="USG-7B-ehw" firstAttribute="top" secondItem="JKK-Sa-eZJ" secondAttribute="bottom" constant="10" id="7tw-jI-qex"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="USG-7B-ehw" secondAttribute="trailing" constant="20" id="9LS-C6-SlJ"/>
+                            <constraint firstItem="xW7-hh-Zl8" firstAttribute="top" secondItem="USG-7B-ehw" secondAttribute="bottom" constant="10" id="QsG-pA-Gh0"/>
+                            <constraint firstItem="JKK-Sa-eZJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eVg-yV-qhz" secondAttribute="bottom" constant="10" id="VFd-qy-OMZ"/>
+                            <constraint firstItem="USG-7B-ehw" firstAttribute="leading" secondItem="z70-R0-nbG" secondAttribute="leadingMargin" constant="20" id="c6m-ZE-c9r"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eVg-yV-qhz" secondAttribute="trailing" constant="20" id="dCv-e9-Aaj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JKK-Sa-eZJ" secondAttribute="trailing" constant="20" id="drI-Ti-VCO"/>
+                            <constraint firstItem="eVg-yV-qhz" firstAttribute="top" secondItem="DTy-iT-NQs" secondAttribute="bottom" constant="25" id="go2-SQ-cpl"/>
                             <constraint firstItem="JKK-Sa-eZJ" firstAttribute="leading" secondItem="z70-R0-nbG" secondAttribute="leadingMargin" constant="20" id="tqo-Rp-RVm"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="hideKeyboardOnTap" value="YES"/>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <outlet property="keyboardConstraint" destination="QsG-pA-Gh0" id="XDf-6L-qMN"/>
+                            <outlet property="keyboardConstraint" destination="QsG-pA-Gh0" id="xYg-FS-byP"/>
                         </connections>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="240"/>
+                    <size key="freeformSize" width="375" height="300"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lxb-5l-kvy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1654" y="307"/>
+            <point key="canvasLocation" x="1654" y="264"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rbx-QP-5PK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oBt-di-xBi" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="oBt-di-xBi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gk2-T9-ohQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="hig-yj-zuX">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="EJr-MQ-nS8" kind="relationship" relationship="rootViewController" id="RTW-c0-CcQ"/>
                     </connections>
