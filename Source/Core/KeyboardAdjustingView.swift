@@ -39,12 +39,11 @@ open class KeyboardAdjustingView: UIView, KeyboardObserver {
         return self.keyboardConstraint
     }
 
-    open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesEnded(touches, with: event)
-
+    open override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         if self.hideKeyboardOnTap {
             self.endEditing(true)
         }
+        return super.hitTest(point, with: event)
     }
 
     deinit {

@@ -1,6 +1,9 @@
 
 # Change Log
 
+## [1.1.4](https://github.com/Decybel07/SwiftyKeyboardObserver/tree/1.1.4) (2017-09-11)
+* Bugfix - Changed from `touchesEnded` to `hitTest`
+
 ## [1.1.3](https://github.com/Decybel07/SwiftyKeyboardObserver/tree/1.1.3) (2017-09-10)
 * Add tutorial images to README
 
