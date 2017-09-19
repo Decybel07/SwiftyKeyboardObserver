@@ -1,6 +1,9 @@
 
 # Change Log
 
+## [2.0.0](https://github.com/Decybel07/SwiftyKeyboardObserver/tree/2.0.0) (2017-09-19)
+* Remove `hideKeyboardOnTap`
+
 ## [1.1.4](https://github.com/Decybel07/SwiftyKeyboardObserver/tree/1.1.4) (2017-09-11)
 * Bugfix - Changed from `touchesEnded` to `hitTest`
 

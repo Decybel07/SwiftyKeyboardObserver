@@ -26,7 +26,6 @@ A codeless library that helps adjusting your views when a keyboard appears, move
 <p align="center">
 <table><tr>
 <td><img src="https://raw.githubusercontent.com/Decybel07/SwiftyKeyboardObserver/master/Images/UIScrollView720.gif" alt="UIScrollView"/></td>
-<td><img src="https://raw.githubusercontent.com/Decybel07/SwiftyKeyboardObserver/master/Images/HideKeyboardOnTap720.gif" alt="HideKeyboardOnTap"/></td>
 </tr></table>
 </p>
 
@@ -52,19 +51,19 @@ pod try SwiftyKeyboardObserver
 ### [CocoaPods](http://cocoapods.org)
 
 ```ruby
-pod 'SwiftyKeyboardObserver', '~> 1.1'
+pod 'SwiftyKeyboardObserver', '~> 2.0'
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```ogdl
-github "Decybel07/SwiftyKeyboardObserver", ~> 1.1
+github "Decybel07/SwiftyKeyboardObserver", ~> 2.0
 ```
 
 ### [Swift Package Manager](https://swift.org/package-manager/)
 
 ```swift
-.Package(url: "https://github.com/Decybel07/SwiftyKeyboardObserver.git", majorVersion: 1)
+.Package(url: "https://github.com/Decybel07/SwiftyKeyboardObserver.git", majorVersion: 2)
 ```
 
 ## 📘 [Usage](http://cocoadocs.org/docsets/SwiftyKeyboardObserver/)
@@ -74,9 +73,6 @@ github "Decybel07/SwiftyKeyboardObserver", ~> 1.1
 
 ### Connect keyboard constraint ###
 <img src="https://raw.githubusercontent.com/Decybel07/SwiftyKeyboardObserver/master/Images/ConnectKeyboardConstraint1280.png" alt="Connect keyboard constraint"/>
-
-### Set hide keyboard on tap ###
-<img src="https://raw.githubusercontent.com/Decybel07/SwiftyKeyboardObserver/master/Images/SetHideKeyboardOnTap1280.png" alt="Set hide keyboard on tap"/>
 
 ## 🤓 Author
 
